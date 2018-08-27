@@ -1,6 +1,6 @@
 ![Atlassian Confluence Server](https://www.atlassian.com/dam/wac/legacy/confluence_logo_landing.png)
  
-Confluence Server is where you create, organise and discuss work with your team. Capture the knowledge that's too often lost in email inboxes and shared network drives in Confluence â€“ where it's easy to find, use, and update. Give every team, project, or department its own space to create the things they need, whether it's meeting notes, product requirements, file lists, or project plans, you can get more done in Confluence.
+Confluence Server is where you create, organise and discuss work with your team. Capture the knowledge that's too often lost in email inboxes and shared network drives in Confluence – where it's easy to find, use, and update. Give every team, project, or department its own space to create the things they need, whether it's meeting notes, product requirements, file lists, or project plans, you can get more done in Confluence.
  
 Learn more about Confluence Server: <https://www.atlassian.com/software/confluence>
 
@@ -119,7 +119,7 @@ To work around this issue, use a different host operating system other than Mac 
  
 # Support
 
-This Docker image is great for evaluating Confluence, however it does use OpenJDK which is not supported for running Confluence in production. 
+This Docker image is great for evaluating Confluence. However, it does not use an Oracle JDK due to licensing constraints. Instead, it uses OpenJDK which is not supported for running Confluence in production.
 
 To meet our supported platform requirements, you'll need to build your own image based on [Oracle JDK](https://github.com/oracle/docker-images/tree/master/OracleJDK). See [Update the Confluence Docker image to use Oracle JDK ](https://confluence.atlassian.com/display/CONFKB/Update+the+Confluence+Docker+image+to+use+Oracle+JDK) for more info. 
 
