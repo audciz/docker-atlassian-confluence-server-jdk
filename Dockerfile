@@ -1,5 +1,4 @@
 FROM anapsix/alpine-java:8_jdk
-MAINTAINER Atlassian Confluence
 
 ENV RUN_USER            daemon
 ENV RUN_GROUP           daemon
