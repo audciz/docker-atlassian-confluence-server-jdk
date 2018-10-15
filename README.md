@@ -123,5 +123,5 @@ This Docker image is great for evaluating Confluence. However, it does not use a
 
 To meet our supported platform requirements, you'll need to build your own image based on [Oracle JDK](https://github.com/oracle/docker-images/tree/master/OracleJDK). See [Update the Confluence Docker image to use Oracle JDK ](https://confluence.atlassian.com/display/CONFKB/Update+the+Confluence+Docker+image+to+use+Oracle+JDK) for more info. 
 
-For product support go to [support.atlassian.com](http://support.atlassian.com).  
+For product support go to [support.atlassian.com](http://support.atlassian.com).
 

@@ -1,5 +1,4 @@
-FROM openjdk:8u121-alpine
-MAINTAINER Atlassian Confluence
+FROM anapsix/alpine-java:8_jdk
 
 ENV RUN_USER            daemon
 ENV RUN_GROUP           daemon
@@ -20,14 +19,14 @@ CMD ["/entrypoint.sh", "-fg"]
 ENTRYPOINT ["/sbin/tini", "--"]
 
 RUN apk update -qq \
-    && update-ca-certificates \
     && apk add ca-certificates wget curl openssh bash procps openssl perl ttf-dejavu tini \
+    && update-ca-certificates \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*
 
 COPY entrypoint.sh              /entrypoint.sh
 
-ARG CONFLUENCE_VERSION=6.5.0-m22
-ARG DOWNLOAD_URL=https://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-${CONFLUENCE_VERSION}.tar.gz
+ARG CONFLUENCE_VERSION=6.12.0
+ARG DOWNLOAD_URL=http://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-${CONFLUENCE_VERSION}.tar.gz
 
 COPY . /tmp
 
