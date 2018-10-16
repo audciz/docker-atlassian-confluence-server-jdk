@@ -23,6 +23,10 @@ RUN apk update -qq \
     && update-ca-certificates \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*
 
+RUN apk add tzdata \
+    && cp /usr/share/zoneinfo/Asia/Almaty /etc/localtime \
+    && echo "Asia/Almaty" >  /etc/timezone
+
 COPY entrypoint.sh              /entrypoint.sh
 
 ARG CONFLUENCE_VERSION=6.12.0
